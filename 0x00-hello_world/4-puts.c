@@ -3,7 +3,9 @@
 /**
 * main - this is the main function
 *
-* Return : always 0 
+* Description: Wow my best is never enough
+*
+* Return : always 0 - Success
 */
 
 int main(void)
