@@ -5,7 +5,7 @@
 *
 * Description: Wow my best is never enough
 *
-* Return : always 0 - Success
+* Return : always 0 Code a Success
 */
 
 int main(void)
