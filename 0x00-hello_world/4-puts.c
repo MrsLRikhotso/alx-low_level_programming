@@ -3,9 +3,7 @@
 /**
 * main - this is the main function
 *
-* Description: the program is driving me crazy
-*
-* Return : always 0 - Success
+* Return : always 0 
 */
 
 int main(void)
