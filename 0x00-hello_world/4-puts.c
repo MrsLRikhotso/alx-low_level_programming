@@ -1,13 +1,9 @@
 #include <stdio.h>
-
 /**
-* main - this is the main function
-*
-* Description: Wow my best is never enough
-*
-* Return : always 0 Code a Success
-*/
-
+  *main - Entry point
+  *Description: 'print a multilingual puzzle'
+  *Return: always 0
+  */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
