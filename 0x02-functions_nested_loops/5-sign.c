@@ -1,7 +1,6 @@
 #include "main.h"
 /**
- *@print_sign - Determines if the input number
- * greater, equal or less that zero.
+ *print_sign - Determines if the input number greater, equal or less that zero.
  *
  *@n: The input number as an integer.
  *
