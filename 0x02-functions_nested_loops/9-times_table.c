@@ -1,6 +1,9 @@
 #include "main.h"
 /**
- * times table - Prints the 0 times table, starting with 0
+ * times table- Print time tables 0
+ *
+ * Description: 'Prints the 0 times table, starting with 0.'
+ *
  * Return: empty output
  */
 void times_table(void)
@@ -12,7 +15,7 @@ void times_table(void)
 	for (y = 0; x <= 9; y++)
 	{
 	z = x * y;
-	if (z > 9)
+ 	if (z > 9)
 	{
 	u = z % 10;
 	d = (z - u) / 10;
@@ -25,11 +28,11 @@ void times_table(void)
 	{
 	if (y != 0)
 	{
-	_putchar(44);
+ 	_putchar(44);
 	_putchar(32);
 	_putchar(32);
-	}
 	_putchar(z + '0');
+	}
 	}
 	}
 	_putchar('\n');
