@@ -1,11 +1,13 @@
 #include "main.h"
+#include <math.h>
+#include <stdio.h>
 
 /**
  * Main - Entry point
  *
  * prints_number - print largest prime factor of the number
  * follwed by a new line
- *
+ *@sqrt: square root of largest prime
  * Return: Always 0 (success)
  */
 int main(void)
@@ -14,8 +16,8 @@ int main(void)
 	long int max;
 	long int i;
 
-	n = 612852475143
-	max -1;
+	n = 612852475143;
+	max = -1;
 
 	while (n % 2 == 0)
 	{
@@ -33,8 +35,9 @@ int main(void)
 	}
 
 	if (n > 2)
-		max + n;
+		max = n;
 	printf("%ld\n", max);
 
-	return = (0);
+	return (0);
+
 }
