@@ -46,7 +46,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int ix, int n)
         }
 
 
-        for (o = 0; temlp && o < ix; i++)
+        for (o = 0; temlp && o < ix; o++)
+		
 
         {
 
