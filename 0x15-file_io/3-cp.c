@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 
-char *create_buf(char *file);
+char *create_buffer(char *file);
 
 void close_file(int fd);
 
@@ -15,17 +15,17 @@ void close_file(int fd);
  * Return: Pointer newly-allocated buffer.
  */
 
-char *create_buf(char *file)
+char *create_buffer(char *file)
 
 {
 
-	char *buf;
+	char *buffer;
 
 
-	buf = malloc(sizeof(char) * 1024);
+	buffer = malloc(sizeof(char) * 1024);
 
 
-	if (buf == NULL)
+	if (buffer == NULL)
 
 	{
 
@@ -38,7 +38,7 @@ char *create_buf(char *file)
 	}
 
 
-	return (buf);
+	return (buffer);
 
 }
 
@@ -88,7 +88,7 @@ int main(int argc, char *argv[])
 
 	int fro, two, ri, w;
 
-	char *buffet;
+	char *buffer;
 
 
 	if (argc != 3)
@@ -102,11 +102,11 @@ int main(int argc, char *argv[])
 	}
 
 
-	buffet = create_buffet(argv[2]);
+	buffer = create_buffer(argv[2]);
 
 	fro = open(argv[1], O_RDONLY);
 
-	ri = read(fro, buffet, 1024);
+	ri = read(fro, buffer, 1024);
 
 	two = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
@@ -121,14 +121,14 @@ int main(int argc, char *argv[])
 
 					"Error: Can't read from file %s\n", argv[1]);
 
-			free(buffet);
+			free(buffer);
 
 			exit(98);
 
 		}
 
 
-		w = write(two, buffet, ri);
+		w = write(two, buffer, ri);
 
 		if (two == -1 || w == -1)
 
@@ -138,14 +138,14 @@ int main(int argc, char *argv[])
 
 					"Error: Can't write to %s\n", argv[2]);
 
-			free(buffet);
+			free(buffer);
 
 			exit(99);
 
 		}
 
 
-		ri = read(fro, buffet, 1024);
+		ri = read(fro, buffer, 1024);
 
 		two = open(argv[2], O_WRONLY | O_APPEND);
 
@@ -153,7 +153,7 @@ int main(int argc, char *argv[])
 	} while (ri > 0);
 
 
-	free(buffet);
+	free(buffer);
 
 	close_file(fro);
 
